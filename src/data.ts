@@ -14,6 +14,7 @@ export const PERSONAL_INFO = {
   linkedin: "https://www.linkedin.com/in/bhupendra-verma-dev",
   github: "https://github.com/bhupendra-verma1",
   location: "Agra, India",
+  image: profile,
   resume: resume,
   aboutParagraphs: [
     "I'm a Full-Stack Java Developer focused on building reliable and scalable web applications using Java, Spring Boot, React, REST APIs, databases, and secure application architectures. My professional experience includes backend development, API optimization, database performance tuning, authentication and authorization, and full-stack application development.",

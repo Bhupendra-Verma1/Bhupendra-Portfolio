@@ -78,7 +78,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
             {/* Developer Portrait Image / Illustration Container */}
             <div className="absolute inset-0 flex items-end justify-center">
               <img
-                src="../../assets/images/Profile_Image.png"
+                src={PERSONAL_INFO.image}
                 alt="Bhupendra Verma - Full-Stack Java Developer"
                 className="w-full h-full object-cover object-top filter brightness-95 contrast-105"
                 onError={(e) => {
