@@ -46,59 +46,152 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
           </div>
         </div>
 
-        {/* Right Developer Portrait Card */}
+        {/* Right Developer Image Section */}
         <div className="lg:col-span-5 flex justify-center lg:justify-end">
-          <div className="relative w-full max-w-[380px] aspect-[4/5] rounded-[28px] overflow-hidden bg-gradient-to-b from-slate-900 via-slate-900 to-black shadow-xl ring-1 ring-slate-800/80 group">
-            
-            {/* Ambient Background Lighting */}
-            <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-cyan-500/20 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute top-1/3 right-1/4 w-40 h-40 bg-blue-600/25 rounded-full blur-3xl pointer-events-none" />
+          <div className="relative w-full max-w-[520px]">
 
-            {/* Neon Java Developer Coffee Sign Graphic */}
-            <div className="absolute top-7 left-7 z-10 select-none">
-              <div className="relative flex flex-col items-center bg-slate-950/60 backdrop-blur-xs px-3.5 py-2 rounded-xl border border-cyan-500/40 shadow-[0_0_15px_rgba(6,182,212,0.35)]">
-                {/* Steaming Coffee Icon with Neon Glow */}
-                <div className="relative mb-1">
-                  <Coffee className="w-7 h-7 text-cyan-300 drop-shadow-[0_0_8px_rgba(6,182,212,0.9)]" />
-                  {/* Subtle steam particles */}
-                  <span className="absolute -top-1 left-2 w-1.5 h-1.5 bg-cyan-200 rounded-full blur-[1px] animate-pulse" />
-                  <span className="absolute -top-2 left-4 w-1 h-1 bg-cyan-300 rounded-full blur-[1px] animate-ping" />
+            {/* Decorative background frame */}
+            <div className="absolute -right-4 -bottom-4 w-full h-full rounded-[32px] border border-blue-200/70 bg-blue-50/40" />
+
+            {/* Main Image Card */}
+            <div className="relative overflow-hidden rounded-[32px] bg-slate-900 shadow-[0_25px_70px_-20px_rgba(15,23,42,0.35)] ring-1 ring-slate-200">
+
+              {/* Image */}
+              <div className="relative aspect-[3/2] overflow-hidden">
+                <img
+                  src={PERSONAL_INFO.image}
+                  alt="Bhupendra Verma - Full-Stack Java Developer"
+                  className="
+            absolute inset-0
+            w-full h-full
+            object-cover
+            object-center
+            transition-transform duration-700
+            group-hover:scale-[1.02]
+          "
+                  onError={(e) => {
+                    e.currentTarget.style.display = "none";
+                  }}
+                />
+
+                {/* Very subtle bottom gradient */}
+                <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-slate-950/70 to-transparent pointer-events-none" />
+
+                {/* Small Java badge */}
+                <div className="absolute top-5 left-5">
+                  <div className="
+            flex items-center gap-2
+            rounded-full
+            bg-slate-950/80
+            backdrop-blur-md
+            border border-white/10
+            px-3.5 py-2
+            shadow-lg
+          ">
+                    <Coffee className="w-4 h-4 text-cyan-400" />
+
+                    <span className="text-xs font-mono font-semibold text-white">
+                      JAVA
+                    </span>
+
+                    <span className="text-slate-500">/</span>
+
+                    <span className="text-xs font-medium text-cyan-300">
+                      Developer
+                    </span>
+                  </div>
                 </div>
-                
-                {/* Neon Code Text */}
-                <div className="text-[11px] font-mono font-bold tracking-tight text-cyan-300 drop-shadow-[0_0_6px_rgba(6,182,212,0.9)]">
-                  &#123; JAVA &#125;
-                </div>
-                <div className="text-[9px] font-mono font-semibold tracking-wider text-cyan-200/90 drop-shadow-[0_0_5px_rgba(6,182,212,0.8)] uppercase">
-                  Developer
+
+                {/* Bottom image information */}
+                <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between">
+
+                  <div>
+                    <p className="text-sm font-semibold text-white">
+                      Bhupendra Verma
+                    </p>
+
+                    <p className="mt-0.5 text-xs text-slate-300">
+                      Full-Stack Java Developer
+                    </p>
+                  </div>
+
+                  <div className="
+            flex items-center gap-2
+            rounded-full
+            bg-white/10
+            backdrop-blur-md
+            border border-white/10
+            px-3 py-1.5
+          ">
+                    <span className="
+              h-2 w-2 rounded-full
+              bg-emerald-400
+              shadow-[0_0_8px_rgba(52,211,153,0.8)]
+            " />
+
+                    <span className="text-[11px] font-medium text-white">
+                      Available
+                    </span>
+                  </div>
+
                 </div>
               </div>
             </div>
 
-            {/* Developer Portrait Image / Illustration Container */}
-            <div className="absolute inset-0 flex items-end justify-center">
-              <img
-                src={PERSONAL_INFO.image}
-                alt="Bhupendra Verma - Full-Stack Java Developer"
-                className="w-full h-full object-cover object-top filter brightness-95 contrast-105"
-                onError={(e) => {
-                  // Fallback to high quality vector developer portrait if network image fails
-                  const target = e.currentTarget;
-                  target.style.display = 'none';
-                }}
-              />
-              
-              {/* Subtle gradient vignette to blend base */}
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent pointer-events-none" />
+            {/* Floating Technology Card */}
+            <div className="
+      absolute
+      -bottom-8
+      -left-7
+      hidden sm:block
+      rounded-2xl
+      bg-white
+      px-4 py-3
+      shadow-[0_15px_40px_-15px_rgba(15,23,42,0.25)]
+      ring-1 ring-slate-200
+    ">
+              <div className="flex items-center gap-3">
+
+                <div className="
+          flex h-9 w-9 items-center justify-center
+          rounded-xl
+          bg-blue-50
+          text-blue-600
+        ">
+                  <span className="font-mono text-sm font-bold">
+                    {"</>"}
+                  </span>
+                </div>
+
+                <div>
+                  <p className="text-[10px] font-medium uppercase tracking-wider text-slate-400">
+                    Primary Stack
+                  </p>
+
+                  <p className="mt-0.5 text-xs font-semibold text-slate-800">
+                    Java • Spring Boot • React
+                  </p>
+                </div>
+
+              </div>
             </div>
 
-            {/* Bottom Floating Status Pill */}
-            <div className="absolute bottom-4 left-4 right-4 z-10 flex items-center justify-between px-3.5 py-2 rounded-xl bg-slate-950/75 backdrop-blur-md border border-slate-700/50">
-              <div className="flex items-center gap-2">
-                <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_8px_rgba(52,211,153,0.8)]" />
-                <span className="text-xs font-medium text-slate-200">Open for Opportunities</span>
-              </div>
-              <span className="text-[11px] font-mono text-cyan-400/90 font-medium">Spring Boot &bull; React</span>
+            {/* Small decorative code element */}
+            <div className="
+      absolute
+      -top-5
+      -right-5
+      hidden md:flex
+      h-14 w-14
+      items-center justify-center
+      rounded-2xl
+      bg-slate-950
+      shadow-xl
+      ring-4 ring-white
+    ">
+              <span className="font-mono text-sm text-cyan-400">
+                {"{}"}
+              </span>
             </div>
 
           </div>
