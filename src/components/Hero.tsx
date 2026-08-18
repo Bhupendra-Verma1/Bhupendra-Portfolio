@@ -103,9 +103,9 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
                 </div>
 
                 {/* Bottom image information */}
-                <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between">
+                <div className="absolute bottom-5 left-5 right-5 flex items-end justify-end">
 
-                  <div>
+                  {/* <div>
                     <p className="text-sm font-semibold text-white">
                       Bhupendra Verma
                     </p>
@@ -113,7 +113,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
                     <p className="mt-0.5 text-xs text-slate-300">
                       Full-Stack Java Developer
                     </p>
-                  </div>
+                  </div> */}
 
                   <div className="
             flex items-center gap-2
